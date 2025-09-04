@@ -61,6 +61,49 @@ CLOUDINARY_API_SECRET=<your-cloudinary-api-secret>
 
 ---
 
+
+
+# 🚀 Project Setup with Neon Database
+
+This project uses [Neon](https://neon.tech/) as the PostgreSQL database.  
+Follow the steps below to configure your database and set up the required table.
+
+---
+
+## 📦 Prerequisites
+
+- A [Neon](https://neon.tech/) account
+- PostgreSQL client installed locally (`psql` or a GUI like TablePlus, DBeaver, etc.)
+- Your Neon database connection string (look for `postgres://...` in your Neon project settings)
+
+---
+
+## 🛠️ Database Setup
+
+1. **Login to Neon Dashboard**  
+   Go to [Neon Console](https://console.neon.tech/) and create a new project.
+
+2. **Copy Connection String**  
+   You'll find it under **Connection Details**.  
+   Example:
+
+```bash
+CREATE TABLE creations (
+  id SERIAL PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  prompt TEXT NOT NULL,
+  content TEXT NOT NULL,
+  type TEXT NOT NULL,
+  publish BOOLEAN DEFAULT FALSE,
+  likes TEXT[] DEFAULT '{}',
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+```
+
+
+
 ## Installation & Local Setup
 
 1. **Clone the Repository**
