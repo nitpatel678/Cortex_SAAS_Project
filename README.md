@@ -109,8 +109,7 @@ CREATE TABLE creations (
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/Varunyadavgithub/NovaCraft-AI.git
-   cd nova-craft-ai
+   git clone https://github.com/nitpatel678/Cortex_SAAS_Project.git
    ```
 
 2. **Install Dependencies**
